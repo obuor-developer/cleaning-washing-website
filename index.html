@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cleaning and Washing Services</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Cleaning and Washing Services</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="clients.html">Clients</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact-form">
+        <h2>Get in Touch</h2>
+        <form id="contactForm">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+        <p id="successMessage" style="display:none; color:green;">Message sent successfully!</p>
+    </section>
+
+    <section class="hero">
+        <h2>Professional Cleaning & Washing Services</h2>
+        <p>We provide top-quality cleaning for homes and businesses.</p>
+        <a href="services.html" class="btn">Our Services</a>
+    </section>
+
+    <section class="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial">
+            <p>"The cleaning service was top-notch! My house has never looked this clean before. Highly recommended!"</p>
+            <h4>- Sarah Johnson</h4>
+        </div>
+        <div class="testimonial">
+            <p>"They did an amazing job cleaning our office space. Very professional and thorough!"</p>
+            <h4>- Michael Brown</h4>
+        </div>
+        <div class="testimonial">
+            <p>"Exceptional washing service! My carpets and upholstery look brand new!"</p>
+            <h4>- Emily White</h4>
+        </div>
+    </section>
+
+    <section class="blog">
+        <h2>Latest Articles</h2>
+        <article>
+            <h3>5 Easy Ways to Keep Your Home Clean</h3>
+            <p>Keeping your home clean doesn’t have to be hard. Here are five simple tricks to maintain a tidy home...</p>
+            <a href="#">Read More</a>
+        </article>
+        <article>
+            <h3>Why Professional Carpet Cleaning is Important</h3>
+            <p>Carpets trap dirt, dust, and allergens. Professional cleaning can help extend their life...</p>
+            <a href="#">Read More</a>
+        </article>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Cleaning and Washing Services. All Rights Reserved.</p>
+    </footer>
+    
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let message = document.getElementById("message").value.trim();
+
+            if (name === "" || email === "" || message === "") {
+                alert("Please fill in all fields.");
+            } else {
+                document.getElementById("successMessage").style.display = "block";
+                document.getElementById("contactForm").reset();
+            }
+        });
+    </script>
+
+</body>
+</html>
